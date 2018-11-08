@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-const config = require('./config/config.json');
+const config = require('../config/config.json');
 
 mongoose.connect(
-    config.database.db_url,
-    { useNewUrlParser: true }
+    config.database.db_url, { useNewUrlParser: true }
 );
 
 mongoose.connection.once('open', () => {

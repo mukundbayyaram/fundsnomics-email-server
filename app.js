@@ -5,7 +5,7 @@ const PORT = require('./config/config').PORT || 3200;
 
 app.use(bodyParser.json());
 
-require('./db');
+require('./db/db');
 require('./routes/routes')(app);
 
 app.use((error, req, res, next) => {
